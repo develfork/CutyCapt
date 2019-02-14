@@ -28,9 +28,7 @@
 #include <QtGui>
 #include <QSvgGenerator>
 
-#if QT_VERSION < 0x050000
 #include <QPrinter>
-#endif
 
 #include <QTimer>
 #include <QByteArray>
@@ -463,7 +461,7 @@ main(int argc, char *argv[]) {
       page.setPrintAlerts(true);
       continue;
 #endif
-    } 
+    }
 
     value = strchr(s, '=');
 
@@ -618,7 +616,7 @@ main(int argc, char *argv[]) {
         method = QNetworkAccessManager::PostOperation;
       else if (strcmp("value", "head") == 0)
         method = QNetworkAccessManager::HeadOperation;
-      else 
+      else
         (void)0; // TODO: ...
 
     } else {
